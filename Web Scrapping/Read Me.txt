@@ -1,0 +1,21 @@
+This project is mainly to get an insight & hands on experience on web scrapping. 
+
+1) (30 points) Use Python to scrape the article posted to TechCrunch.com and present the articles on the front page in a table with the following pieces of information: 
+
+    article title 
+    publish date
+    author
+    tags
+
+
+2) (5 points) Scrape  https://www.data.gov (Links to an external site.)Links to an external site. to identify the number of data sets available.
+
+3) (10 points) Identify the number of U.S. Senate votes in the 115th Congress that were rejected by a margin of less than 5 votes.  Also, provide a list of which votes (#) match this criteria.  
+Data available at: https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_115_1.htm (Links to an external site.)Links to an external site.
+
+4) (5 points) Give the number of alerts and warnings for international travel given by the US government. 
+Data available at: https://travel.state.gov/content/passports/en/alertswarnings.html (Links to an external site.)Links to an external site. 
+
+5) (10 points) Report the total number of female babies whose names start with 'K' so far this decade. 
+Data available at: https://www.ssa.gov/OACT/babynames/decades/names2010s.html (Links to an external site.)Links to an external site.
+
