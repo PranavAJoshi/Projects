@@ -1,0 +1,15 @@
+What we are doing in this question:-  
+1)loading of iris data (all features).
+2)spliting 80% of this data for training & remaining 20% data for testing.
+3)Now, we creates a classifier, then we train & fit this classifier object, and 
+finally, we predict our testing data.
+1)Calculating accuracy, precision, recall, and f1 score & ploting this versus no. of neighbours.
+2)To get a clear insight, we are plotting the performance measures with neighbors individually & together also.
+  
+Note:- We are doing this process:- 
+ 1) for k values 1 to 50. Hence, no. of neighbours in X-axis of plot is from 1 to 50
+ 2) for both uniform & distance weighted classifier.
+ 3) for both micro & macro averaged precision, recall and f1 score.
+ 4) calculating & plotting accuracy, precision, recall and f1 score
+    for both overall data(all classes included) and for each classes(class 1, class 2, class 3) individually.
+           

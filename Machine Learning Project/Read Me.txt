@@ -1,0 +1,8 @@
+This machine learning project is to get an insight & hands on experience on K-nearest classifier, k-cross validation.
+Main objective is to train & test the Iris data. 
+
+1) Plot accuracy, precision, recall, and f1-score vs. the number of neighbors with a 20% test split on the iris data using all 4 features. Use number of neighbors from 1 to 50 with both uniform and distance weighted classifiers. Comment on the results. Which classifier would you choose if you could only choose one? (That is, what value of n_neighbors would you choose and what kind of weight?)
+
+2) Use PCA to reduce the iris data set to 2 components, then repeat the experiment you did in part 1). Plot the classification regions and the testing data (you can directly modify the PCA chunk of code provided above) to show the best classifier and the worst classifier. Comment on the results. You should comment on the bias and variance of the best and worst classifiers.
+Type a message...
+
