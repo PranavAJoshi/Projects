@@ -1,0 +1,8 @@
+This visualization project is to get a hands on experience & insight of matplotlib, pandas, seaborn libraries in python.
+
+Part 1 - Plot of gender degree data.
+Part 2 - Plot with error bars of climate data.
+Part 3 - Histograms of climate data 
+
+Source:- 1) http://www.randalolson.com/wp-content/uploads/percent-bachelors-degrees-women-usa.csv
+	 2) http://berkeleyearth.lbl.gov/auto/Global/Complete_TAVG_daily.txt
