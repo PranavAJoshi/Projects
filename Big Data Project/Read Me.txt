@@ -1,0 +1,9 @@
+The main objective of this project is to understand the use of map reduce, mapper & reducer.
+
+Part 1) Write a reducer which returns the top n words from list of document files. (We started this in class.)
+
+Part 2) Write a mapper and reducer to process all the files available at https://www.ssa.gov/oact/babynames/names.zip (Links to an external site.)Links to an external site.
+
+The output of your reducer should be a list of the 'n' most common names that start with a given letter from a list of files input to the map_reduce function. For example, one should be able to use your map_reduce implementation to find the 10 most popular names that start with 'k' from the files ["yob1967.txt", "yob1968.txt", "yob1969.txt"]. Note that if there aren't 10 names that start with 'k' then your reducer should only return the number that exist; it should not produce an error.
+
+Part 3) Write a mapper and reducer that returns the top 'n' names from a list of files that contain (anywhere within the name) a given string. For example, if I want the top 10 names that contain 'sty' from files ["yob1967.txt", "yob1968.txt", "yob1969.txt"], it could return names such as 'Misty', 'Christy', 'Astyr', 'Stymus', 'Pasty', etc. (I just made those up; that isn't actually the answer.)
