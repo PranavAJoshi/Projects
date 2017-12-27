@@ -1,0 +1,30 @@
+Here, we are first reducing components using PCA, then testing the data using ML algorithms.
+
+
+Summary
+
+
+1) What we are doing in this question:-  
+  -> loading of iris data (all features).
+  -> spliting 80% of this data for training & remaining 20% data for testing.
+  -> Now, we creates a classifier, then we train & fit this classifier object, and finally, we predict our testing data.
+  -> Calculating accuracy, precision, recall, and f1 score & ploting this versus no. of neighbours.
+  -> To get a clear insight, we are plotting the performance measures with neighbors individually & together also.
+  -> Now, we plot classification region on the basis of Best & Worst classifier.
+
+ Note:- We are doing this process:- 
+        1) for k values 1 to 50. Hence, no. of neighbours in X-axis of plot is from 1 to 50
+        2) for both uniform & distance weighted classifier.
+        3) for both micro & macro averaged precision, recall and f1 score.
+        4) calculating & plotting accuracy, precision, recall and f1 score
+           for both overall data(all classes included) and for each classes(class 1, class 2, class 3) individually.
+        5) plotting the classification region for both uniform & distance model (for the best & worst classifier.)
+
+2) What we observed & concluded after completing this second question of the assignment:- 
+   -> For micro-averaged, precision, recall and f1 score are same, & therefore graph is also similar.
+   -> For macro-averaged, precision, recall and f1 are different, but, with a very small margin as we can see in the plots.
+   -> We can also calculate precision, recall and f1 for each classes(class 1, class 2, class 3) using confusion matrix.
+   
+   -> Best classifier is that classifier which shows best accuracy or less error rate at any particular value of "k".
+   -> Worst classifier is that classifier which shows least accuracy or high error rate at any particular value of "k".
+
