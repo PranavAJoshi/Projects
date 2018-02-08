@@ -1,0 +1,94 @@
+---
+title: "Data Challenge (J&J)"
+author: "Pranav Anand Joshi"
+date: ''
+output:
+  word_document: default
+  pdf_document: default
+  html_document:
+    highlight: textmate
+    theme: null
+editor_options: 
+  chunk_output_type: console
+---
+
+
+```{r packages, echo=FALSE, results='hide'}
+
+## Inserting code to install required packages
+list.packages = c("elasticnet", "lars", "MASS", "pls", "ggplot2", "mlbench", "lattice", "car", "knitr", "caret", "e1071", "DT", "gplots", "ROCR", "klaR", "corrplot", "AppliedPredictiveModeling", "data.table", "kableExtra", "VIM", "Amelia", "earth", "kernlab", "nnet", "mlbench", "plotmo", 'pROC')
+
+list.packages = unique(list.packages)
+install.pack = list.packages %in% installed.packages()
+if(length(list.packages[!install.pack]) > 0) 
+  install.p = install.packages(list.packages[!install.pack])
+lapply(list.packages, require, character.only=TRUE)
+rm(list.packages, install.pack)
+```
+
+```{r}
+#sample data csv file importing
+data = read.csv('//homedir.mtu.edu/home/Desktop/J&J/Sample_data.csv')
+
+#checking for near zero variance (degenerated predictors)
+zeroVar = nearZeroVar(data[, 2:27])
+zeroVar
+#There is no degenerated predictor.
+
+#checking for highly correlated predictors
+high_corr = findCorrelation(cor(data[, 2:27 ]), cutoff=0.95)
+cor <- cor(data[, 2:27])
+corrplot::corrplot(cor, order = "hclust")
+names(data[, 2:27])[high_corr]
+#"MSg"    "Aid1G"  "FSg"    "Aid2g"  "MSBCg"  "Energy"
+
+#distributed the data for training & testing
+train_X = data[1:93, 2:27]
+test_X = data[94:116, 2:27]
+train_Y = data[1:93, 1]
+test_Y = data[94:116, 1]
+```
+
+```{r tec_PLS}
+set.seed(1) 
+
+#Training the model with Partial Least Square Method
+ctrl = trainControl(method="LGOCV", number=5)
+pls = train(x = train_X, y = train_Y, method = "pls", trControl = ctrl, preProc = c("center", "scale"), tuneLength = 20)
+cat('Summary Analysis of Partial Least Square Model')
+
+#Checking the R-squared value & MSE error
+pls_result = pls$results
+pls
+summary(pls)
+
+#Inserting a code consist of R function which will extract the important factors
+important_var <- varImp(pls)
+important_var
+
+#Creating the barplot for proper visualisation
+plot(important_var)
+```
+
+```{r tec_SVM}
+set.seed(1) 
+#Training the model by using SVM method
+ctrl = trainControl(method="LGOCV", number=5)
+svm = train(x = train_X, y = train_Y, method = "svmRadial", trControl = ctrl, preProc = c("center", "scale"), tuneLength = 20)
+cat('Summary Analysis of SVM Model')
+
+#Checking the R-squared value & MSE error
+svm_result = svm$results
+svm
+summary(svm)
+
+#Inserting a code consist of R function which will extract the important factors
+important_var <- varImp(svm)
+important_var
+
+#Creating the barplot for better visualisation
+plot(important_var)
+```
+
+
+

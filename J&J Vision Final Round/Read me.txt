@@ -1,0 +1,21 @@
+There are 5 files available here:-
+
+1) Case Study & Sample Dataset Analysis
+
+In this file I have answered the case study and the questions asked in dataset analysis.
+
+2) Lens Quality Result (Code) Interpretation
+
+Here, I explaind my code and how I reached to conculsion on the basis of results.
+
+3) Lens Quality_Dataset_Analysis
+
+This is the rmd file to check the code in Rstudio.
+
+4) Time Spent
+
+This file is all about the time spent on each task.
+
+5) Sample_ dataset
+
+This is the csv file that Iimported in code for further analysis of data.
